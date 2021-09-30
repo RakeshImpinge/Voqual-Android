@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_myLogs"
+            android:title="@string/my_logs" />
+
+        <item
+            android:id="@+id/nav_userDetails"
+            android:title="@string/user_details" />
+        <item
+            android:id="@+id/nav_changePass"
+            android:title="@string/change_password" />
+        <item
+            android:id="@+id/nav_researcherInfo"
+            android:title="@string/researcher_info" />
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/logout" />
+    </group>
+</menu>

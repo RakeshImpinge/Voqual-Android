@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_music" />
+
+        <ImageView
+            android:id="@+id/ivWave"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/tvRecordTime"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:contentDescription="@null"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/edtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/title"
+            android:inputType="textCapSentences" />
+
+        <Button
+            android:id="@+id/btnStartRecordAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/record_audio"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnStopRecordAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/stop_recoding"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/save"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>

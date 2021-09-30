@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="26dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:paddingBottom="10dp"
+        android:text="@string/message_to_researcher"
+        android:textAllCaps="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="start"
+        android:hint="@string/type_your_message_here"
+        android:inputType="text|textMultiLine|textCapSentences"
+        android:lines="6"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_button"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="@string/send"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

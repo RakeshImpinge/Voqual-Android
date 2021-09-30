@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.westernsydneyunipx.consents.ConsentCheckActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/margin150"
+                android:layout_height="@dimen/margin150"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_gravity="center"
+                android:src="@drawable/univ"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin10"
+                android:gravity="center"
+                android:text="Consent Form for Study Participants Using the VoQual App"
+                android:textSize="@dimen/normal_text"
+                android:textStyle="bold" />
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin20"
+            android:gravity="center"
+            android:text="Study Title: The RESPCCT Study"
+            android:textSize="@dimen/normal_text"
+            android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin5"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/margin10"
+                android:text="Research Examining the Stories of Pregnancy and Childbearing in Canada Today"
+                android:textSize="@dimen/normal_text"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin10"
+                android:text="Who is conducting this study?"
+                android:textSize="@dimen/normal_text"
+                android:textStyle="bold"/>
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="Principal Investigator: Saraswathi Vedam, RM PhD, Professor UBC Midwifery. (604) 875-2424 x 5831" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="Team members: Beverley Chalmers, International Perinatal Health Consultant, (613) 583 2082; Wendy Hall, Professor Emeritus, School of Nursing, University of British Columbia (604) 822-7447.; Jan Christilaw, Clinical Professor, Division of General Gynecology &amp; Obstetrics, (604)-875-2809, Kathrin Stoll, Research Associate, Division of Midwifery (604) 836-8900; Janusz Kaczorowski, Professor and Research Director, Department of Family and Emergency Medicine, Université de Montreal, (514) 890-8000 x 15476; Wanda Phillips-Beck, Indigenous institute of Health and Healing, University of Manitoba, (204) 957-8464; Lesley Tarasoff, Postdoctoral Research Fellow, Interdisciplinary Centre for Health &amp; Society, University of Toronto Scarborough, 647-601-4519; Elizabeth Darling, Associate Professor, Department of Obstetrics and Gynecology, McMaster University, (905) 525-9140 x 21597; Rachel Olsen, Director of Research, Firelight Group, (604) 563-2245; Raymonde Gagnon, Professor, Midwifery Program, Université du Québec à Trois Rivières, (819) 376-5011 x 4067; Vicki Van Wagner, Associate Professor Midwifery Education Program Ryerson University, (613) 737-7600 x 6022; Wendy Norman, Canadian Institutes of Health Research - Public Health Agency of Canada Chair, Family Planning Public Health Research, Associate Professor, Department of Family Practice at University of British Columbia, (604) 875-2424 x 4894." />
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="Study Team: Our team includes current and future parents, service providers, researchers, health systems leaders, and community partners. We used a community-led process to design a study that focuses on the World Health Organization standards for high quality, respectful pregnancy, childbirth, and newborn care: safe, effective, equitable and person-centered care" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin40"
+                android:text="Who is funding this study?"
+                android:textSize="@dimen/normal_text"
+                android:textStyle="bold"/>
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="Funding for this study was provided by the Canadian Institutes of Health Research." />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin40"
+                android:text="Why are we conducting this study?"
+                android:textSize="@dimen/normal_text"
+                android:textStyle="bold"/>
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="Very little is known about how people experience healthcare during pregnancy and childbirth across Canada, especially among people with diverse identities, circumstances and backgrounds. It matters that we understand the diverse experiences of people who have received healthcare during
+
+
+
+
+
+
+pregnancy and childbirth, so that we can recommend ways to better meet everyone’s needs. To make sure we are asking relevant questions, researchers and a team of community members who had recent pregnancy experiences, worked together to identify topics they thought needed to be explored through this study.
+
+You are being invited to participate in this study, because we value your opinion about how to best provide pregnancy, childbirth, and newborn care that is high quality, respectful, equitable and person-centered. We will use your information to improve childbearing care for all types of communities.
+" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin40"
+                android:text="If I agree to participate in the study, what happens next?"
+                android:textSize="@dimen/normal_text"
+                android:textStyle="bold"/>
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="You will be redirected to our mobile application (app) “VoQual” which enables you to create video and audio recordings. The app then transmits your video and/or audio recording to a secure server where our research team can download the recording. Please note that researchers will transcribe your recording, and then include it with all of the other transcripts, to find common themes. If you wish, you may choose to allow for your recorded audio or video to be used for public presentations, and you can consent to that below. Please note that the recordings will not be linked to your survey findings."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin40"
+                android:text="What will happen with the study results?"
+                android:textSize="@dimen/normal_text"
+                android:textStyle="bold"/>
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="The information you supply on the VoQual App will only be made accessible to researchers involved in the study. All information you supply will be encrypted and stored with an identifier number. Only the developer at Western Sydney University will have access to the identifier number and the encrypted data, but not the means to decrypt it.  The data will be stored as video (MP4) or audio (MP3) files on a secure server at Western Sydney University. Secure electronic transfer using File Transfer Protocols will allow only researchers at the University of British Columbia to access the recordings for analysis. Just as with your survey responses, the data will be analyzed as a group, meaning that the data from all the participants will be used together to identify key themes from their stories." />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin40"
+                android:text="Are there any risks to participating in this study?"
+                android:textSize="@dimen/normal_text"
+                android:textStyle="bold"/>
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="Your participation in this project is entirely voluntary. We do not anticipate that participating in our study will cause you harm in any way. We have designed the study so that when you first enter the app, you will choose the way(s) you permit the researchers to use your information. This is entirely up to you. The options you will be given to select from, are:
+1.	I wish to participate in this study, and I consent to have my recording transcribed and added to a research database. The researchers can combine my data with other people’s data, to find common themes.
+
+The following three options are additional ways that the research team could use your information. You will be asked to consent to any of the following that you are comfortable with.
+
+1.	I consent to have parts of the transcript of my recording (e.g., “quotes”) reproduced in reports, presentations or knowledge translation activities (for example, quotes may be used by actors in a play or recorded by an actor),
+2.	I consent to have my voice recording or parts of my voice recording reproduced in presentations or knowledge translation activities (e.g. the voice recording might be played during a presentation or other knowledge translation activity),
+3.	I consent to have my video recording or parts of my video recording reproduced in presentations or knowledge translation activities (e.g. the video might be played during a presentation or other knowledge translation activity).
+
+It is important to note that if you choose the options which permit the researchers to publicly share your story through either audio or video recording, once the researchers have used your story to share in a public realm, that sharing cannot be undone. Please only select these options if you feel completely comfortable with your audio or video recording possibly being shared publicly.
+
+If talking about your pregnancy or birth experience in Canada brings up difficult emotions or memories, please click here for resources.
+" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin40"
+                android:text="What are the benefits of participating in this study?"
+                android:textSize="@dimen/normal_text"
+                android:textStyle="bold"/>
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="By participating in this study, you will have the opportunity to reflect on the healthcare you received during pregnancy and childbirth. Sharing your experience may be joyful. By sharing your experiences or thoughts, you will be helping the research team develop recommendations about providing the best childbearing care for all types of communities, promoting what is working, and making recommendations for what could be improved." />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin40"
+                android:text="How will your confidentiality be maintained?"
+                android:textSize="@dimen/normal_text"
+                android:textStyle="bold"/>
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="Your confidentiality will be respected. Any information that discloses your identity will not be released without your consent.
+You can delete recordings on the app if you no longer want to use a recording and can also delete the app. The app may also ask you some basic demographic information that you were already asked in the survey. The app contains an option to review your recording and to change it if you have made a mistake. However, once the recordings (data) is downloaded from the website you will not be identifiable and will no longer be able to withdraw this data.
+Once you have consented to use the app, the demographic data you provided when you signed up for the app will be encrypted and sent to an encrypted database. The demographic data is not stored on your device, it will be stored in a database in its encrypted form and is only unencrypted when accessed by the study researcher. The video and audio data is also encrypted and is held on your device. You will have the option to review or delete your recordings on the app, if you wish. Uploading the audio or video recorded data to our encrypted database will either happen immediately after it is completed, or when your device is next connected to the internet through WiFi, depending on your preference. The data is held on a block storage service. Both sets of data are mapped solely with the identifier number. Information will be retained by server for three months after the conclusion of your participation, or earlier if elected by the researcher, after which point it will be deleted from the server. The researcher will likely retain an offline copy of the data for the research analysis.  We encourage participants to submit audio, rather than video files.
+Option to link recording to RESPCCT survey responses
+
+ Most people who see this consent form have already completed the RESPCCT survey. At the end of the survey people had the option of sharing comments about an event or interaction they had during their pregnancy or birth by using VoQual. If you participated in the survey you will have the option of linking your survey responses to your recording by generating a random number and using this number as your username when you sign up for the app.  If you did not participate in the survey, but would like to, please visit www.respcct.ca
+" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin40"
+                android:text="Will you be paid for your participation in this study?"
+                android:textSize="@dimen/normal_text"
+                android:textStyle="bold"/>
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="We will not be paying you for your participation in this study, however you will have our sincere gratitude for the contribution of your time and sharing your experience" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin40"
+                android:text="How can I access any materials produced from this research project?"
+                android:textSize="@dimen/normal_text"
+                android:textStyle="bold"/>
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="All reports or materials produced from this study will be made publicly available on our website, www.birthplacelace.ca. We invite you to check back and look at the study reports, if you are interested" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin40"
+                android:text="Who can you contact if you have any questions about this study?"
+                android:textSize="@dimen/normal_text"
+                android:textStyle="bold"/>
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="If you have any questions or want more information about this study, please contact us at engage.birthplacelab@ubc.ca or phone 604-875-2000 ext.5771.
+
+If you have any concerns or complaints about your rights as a research participant and/or your experiences while participating in this study, contact the Research Participant Complaint Line in the University of British Columbia Office of Research Ethics by e-mail to: RSIL@ors.ubc.ca or by phone at 604-822-8598 (Toll Free: 1-877-822-8598). Please refer to ethics number H18-01961.
+" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginEnd="@dimen/margin40"
+                android:text="Participant consent"
+                android:textSize="@dimen/normal_text"
+                android:textStyle="bold"/>
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="Participation in this survey is entirely voluntary. Please check below to what you are consenting to before you begin. Please note that the first consent is needed to proceed using this app for the research project:" />
+            <CheckBox
+                android:id="@+id/check_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="@string/large_screen_first_consent" />
+            <CheckBox
+                android:id="@+id/check_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="@string/large_screen_second_consent" />
+            <CheckBox
+                android:id="@+id/check_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:text="@string/large_screen_third_consent" />
+            <CheckBox
+                android:id="@+id/check_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin40"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:visibility="gone"
+                android:text="@string/large_screen_fourth_consent" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginStart="@dimen/margin40"
+                android:layout_marginEnd="@dimen/margin40"
+                android:layout_marginBottom="@dimen/margin20"
+                android:gravity="center"
+                android:text="Save and login to proceed" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
