@@ -242,7 +242,7 @@ public class SignUpActivity extends BaseActivity implements AdapterView.OnItemSe
 
     private void researcherList() {
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<ListResponse<User>> callApi = apiInterface.researcherList();
+        Call<ListResponse<User>> callApi = apiInterface.researcherList(new SessionManager(this).getAccessToken());
 
         callApi.enqueue(new Callback<ListResponse<User>>() {
 

@@ -41,7 +41,9 @@ import com.westernsydneyunipx.voqual.R;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import butterknife.BindView;
@@ -244,8 +246,10 @@ public class RecordAudioActivity extends BaseActivity implements Chronometer.OnC
     public void MediaRecorderReady() {
         mediaRecorder = new MediaRecorder();
         mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-        mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+//        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+//        mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
+        mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
         mediaRecorder.setOutputFile(audioSavePathInDevice);
     }
 
@@ -276,6 +280,9 @@ public class RecordAudioActivity extends BaseActivity implements Chronometer.OnC
         File file = new File(audioSavePathInDevice);
         RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file);
         MultipartBody.Part body = MultipartBody.Part.createFormData("file", file.getName(), requestFile);
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        String timestamp = String.valueOf(System.currentTimeMillis());
 
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
         Call<RestResponse<MediaData>> callApi = apiInterface.uploadMedia(sessionManager.getUser().getId(), 1,

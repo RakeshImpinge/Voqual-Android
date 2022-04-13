@@ -87,6 +87,11 @@ public class RecordVideoActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record_video);
+
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        String d = formatter.format(date);
+        Log.d("TAG", "onCreate: date "+d);
     }
 
     @Override
@@ -286,7 +291,9 @@ public class RecordVideoActivity extends BaseActivity {
         File file = new File(compressedFilePath);
         RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file);
         MultipartBody.Part body = MultipartBody.Part.createFormData("file", file.getName(), requestFile);
-
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        String d = formatter.format(date);
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
         Call<RestResponse<MediaData>> callApi = apiInterface.uploadMedia(new SessionManager(
                 RecordVideoActivity.this).getUser().getId(), 2, edtTitle.getText().toString(), body);

@@ -10,7 +10,8 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true">
         <activity android:name="com.westernsydneyunipx.consents.LessConsentActivity"></activity>
         <activity android:name="com.westernsydneyunipx.consents.ConsentCheckActivity" />
         <activity

@@ -27,6 +27,7 @@ public class SessionManager {
     private static final String PREF_NAME = "VoQual";
     private static final String IS_LOGIN = "is_login";
     private static final String USER = "user";
+    private final String ACCESS_TOKEN = "access_token";
 
     private Context context;
 
@@ -90,5 +91,14 @@ public class SessionManager {
 
     private boolean isLoggedIn() {
         return pref.getBoolean(IS_LOGIN, false);
+    }
+
+    public void setAccessToken(String token){
+        editor.putString(ACCESS_TOKEN,token);
+        editor.commit();
+    }
+
+    public String getAccessToken(){
+        return pref.getString(ACCESS_TOKEN,"");
     }
 }

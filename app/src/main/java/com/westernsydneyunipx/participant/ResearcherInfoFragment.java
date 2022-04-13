@@ -48,7 +48,8 @@ public class ResearcherInfoFragment extends BaseFragment {
         showLoading(getString(R.string.please_wait));
 
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<RestResponse<User>> callApi = apiInterface.getResearcherInfo(new SessionManager(getActivity()).getUser().getResearcher_id());
+        SessionManager sessionManager = new SessionManager(requireActivity());
+        Call<RestResponse<User>> callApi = apiInterface.getResearcherInfo(sessionManager.getAccessToken(), sessionManager.getUser().getResearcher_id());
 
         callApi.enqueue(new Callback<RestResponse<User>>() {
 

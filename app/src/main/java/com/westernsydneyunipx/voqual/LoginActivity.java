@@ -150,7 +150,9 @@ public class LoginActivity extends BaseActivity {
                         User user = response.body().data();
                         SessionManager sessionManager = new SessionManager(LoginActivity.this);
                         sessionManager.createLogin(user, cbKeepLogged.isChecked());
-
+                        String accessToken = response.body().getAccess_token();
+                        Log.d("Rakesh", "onResponse: access token is "+accessToken);
+                        sessionManager.setAccessToken(accessToken);
                         if (type == 2) {
 
                             startActivity(new Intent(LoginActivity.this, ParticipantActivity.class));

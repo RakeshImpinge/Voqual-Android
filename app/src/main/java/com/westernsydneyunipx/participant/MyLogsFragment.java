@@ -201,7 +201,7 @@ public class MyLogsFragment extends BaseFragment {
         }
 
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<ListResponse<MediaData>> callApi = apiInterface.audioList(userId);
+        Call<ListResponse<MediaData>> callApi = apiInterface.audioList(sessionManager.getAccessToken(), userId);
 
 
         callApi.enqueue(new Callback<ListResponse<MediaData>>() {

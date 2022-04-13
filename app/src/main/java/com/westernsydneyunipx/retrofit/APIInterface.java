@@ -21,6 +21,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
@@ -37,7 +38,7 @@ import retrofit2.http.Query;
 public interface APIInterface {
 
     @GET("researcher_list")
-    Call<ListResponse<User>> researcherList();
+    Call<ListResponse<User>> researcherList(@Header("Authorization") String accessToken);
 
     @POST("signup")
     Call<RestResponse<User>> signup(@Body HashMap<String, Object> hashMap);
@@ -50,7 +51,7 @@ public interface APIInterface {
     Call<RestResponse<User>> login(@Body HashMap<String, Object> hashMap);
 
     @POST("save_profile")
-    Call<RestResponse<User>> saveProfile(@Body HashMap<String, Object> hashMap);
+    Call<RestResponse<User>> saveProfile(@Header("Authorization") String accessToken, @Body HashMap<String, Object> hashMap);
 
 
     @Multipart
@@ -58,17 +59,17 @@ public interface APIInterface {
     Call<RestResponse<User>> saveProfilee(@PartMap HashMap<String, RequestBody> hashMap, @Part MultipartBody.Part part);
 
     @GET("get_researcher_info")
-    Call<RestResponse<User>> getResearcherInfo(@Query("user_id") int user_id);
+    Call<RestResponse<User>> getResearcherInfo(@Header("Authorization") String accessToken, @Query("user_id") int user_id);
 
     @POST("change_password")
-    Call<RestResponse> changePassword(@Body HashMap<String, Object> hashMap);
+    Call<RestResponse> changePassword(@Header("Authorization") String accessToken, @Body HashMap<String, Object> hashMap);
 
 
     @POST("save_consent")
-    Call<RestResponse> saveConsent(@Body HashMap<String, Object> hashMap);
+    Call<RestResponse> saveConsent(@Header("Authorization") String accessToken , @Body HashMap<String, Object> hashMap);
 
     @GET("audio_list")
-    Call<ListResponse<MediaData>> audioList(@Query("user_id") int user_id);
+    Call<ListResponse<MediaData>> audioList(@Header ("Authorization") String accessToken,  @Query("user_id") int user_id);
 
     @GET("video_list")
     Call<ListResponse<MediaData>> videoList(@Query("user_id") int user_id);

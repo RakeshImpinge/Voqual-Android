@@ -224,7 +224,7 @@ public class ConsentCheckActivity extends BaseActivity implements View.OnClickLi
         showLoading(getString(R.string.please_wait));
 
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<RestResponse> callApi = apiInterface.saveConsent(hashMap);
+        Call<RestResponse> callApi = apiInterface.saveConsent(new SessionManager(this).getAccessToken(),hashMap);
         callApi.enqueue(new Callback<RestResponse>() {
 
             @Override

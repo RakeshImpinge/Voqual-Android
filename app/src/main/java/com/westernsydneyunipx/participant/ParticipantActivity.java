@@ -3,6 +3,7 @@ package com.westernsydneyunipx.participant;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
@@ -24,6 +25,7 @@ import android.widget.Toast;
 import com.squareup.picasso.Picasso;
 import com.westernsydneyunipx.audio.AudioPopupDialog;
 import com.westernsydneyunipx.audio.RecordAudioActivity;
+import com.westernsydneyunipx.customer_support.ContactSupportFragment;
 import com.westernsydneyunipx.model.MediaData;
 import com.westernsydneyunipx.model.User;
 import com.westernsydneyunipx.reseracher.ChangePasswordFragment;
@@ -133,6 +135,10 @@ public class ParticipantActivity extends BaseActivity
             case R.id.nav_changePass:
                 getSupportActionBar().setTitle(getString(R.string.change_password));
                 fragment = new ChangePasswordFragment();
+                break;
+            case R.id.nav_customer_support:
+                getSupportActionBar().setTitle(getString(R.string.contact_us));
+                fragment = new ContactSupportFragment();
                 break;
             case R.id.nav_logout:
                 logout();

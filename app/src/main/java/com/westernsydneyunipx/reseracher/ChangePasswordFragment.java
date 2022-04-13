@@ -60,13 +60,14 @@ public class ChangePasswordFragment extends BaseFragment {
     private void changePassword() {
         showLoading(getString(R.string.please_wait));
 
+        SessionManager sessionManager = new SessionManager(requireActivity());
         HashMap<String, Object> hashMap = new HashMap<>();
-        hashMap.put("user_id", new SessionManager(getActivity()).getUser().getId());
+        hashMap.put("user_id", sessionManager.getUser().getId());
         hashMap.put("old_password", edtOldPassword.getText().toString().trim());
         hashMap.put("password", edtNewPassword.getText().toString().trim());
 
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<RestResponse> callApi = apiInterface.changePassword(hashMap);
+        Call<RestResponse> callApi = apiInterface.changePassword(sessionManager.getAccessToken(),hashMap);
 
         callApi.enqueue(new Callback<RestResponse>() {
 

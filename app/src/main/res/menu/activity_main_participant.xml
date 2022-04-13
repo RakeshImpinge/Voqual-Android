@@ -18,6 +18,9 @@
             android:id="@+id/nav_researcherInfo"
             android:title="@string/researcher_info" />
         <item
+            android:id="@+id/nav_customer_support"
+            android:title="@string/customer_support"/>
+        <item
             android:id="@+id/nav_logout"
             android:title="@string/logout" />
     </group>

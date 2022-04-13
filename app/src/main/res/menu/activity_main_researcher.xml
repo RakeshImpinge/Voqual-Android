@@ -14,6 +14,9 @@
             android:id="@+id/nav_changePass"
             android:title="@string/change_password" />
         <item
+            android:id="@+id/nav_customer_support"
+            android:title="@string/customer_support"/>
+        <item
             android:id="@+id/nav_logout"
             android:title="@string/logout" />
     </group>

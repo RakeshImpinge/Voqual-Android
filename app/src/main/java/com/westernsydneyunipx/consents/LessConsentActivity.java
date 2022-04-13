@@ -14,6 +14,7 @@ import com.westernsydneyunipx.retrofit.APIClient;
 import com.westernsydneyunipx.retrofit.APIInterface;
 import com.westernsydneyunipx.retrofit.response.RestResponse;
 import com.westernsydneyunipx.util.BaseActivity;
+import com.westernsydneyunipx.util.SessionManager;
 import com.westernsydneyunipx.voqual.LoginActivity;
 import com.westernsydneyunipx.voqual.R;
 
@@ -97,7 +98,7 @@ public class LessConsentActivity extends BaseActivity implements View.OnClickLis
         showLoading(getString(R.string.please_wait));
 
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<RestResponse> callApi = apiInterface.saveConsent(hashMap);
+        Call<RestResponse> callApi = apiInterface.saveConsent(new SessionManager(this).getAccessToken(),hashMap);
         callApi.enqueue(new Callback<RestResponse>() {
 
             @Override

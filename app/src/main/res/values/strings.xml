@@ -85,6 +85,11 @@
     <string name="large_screen_second_consent">A written version of my recording, or parts of my recording, may be used in reports or public discussions of the research (e.g. the transcript may be used in reports, or public discussions of the research such as a play adapted from the text performed by actors)</string>
     <string name="large_screen_third_consent">My voice recording, or parts of my voice recording may be included in presentations or other public discussions of the research (e.g. the voice recording might be played, in whole or in part, during a presentation)</string>
     <string name="large_screen_fourth_consent">My video recording or parts of my video recording may be included in presentations or other public discussions of the research (e.g. the video recording might be played, in whole or in part, during a presentation)</string>
+    <string name="customer_support">Customer Support</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="any_question_or_remarks">Any question or remarks? Just write us an email!</string>
 
 
 </resources>

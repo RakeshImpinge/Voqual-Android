@@ -204,7 +204,7 @@ public class ProfileFragment extends BaseFragment {
 
 
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<RestResponse<User>> callApi = apiInterface.saveProfile(hashMap);
+        Call<RestResponse<User>> callApi = apiInterface.saveProfile(new SessionManager(requireActivity()).getAccessToken(),hashMap);
         callApi.enqueue(new Callback<RestResponse<User>>() {
 
             @Override
