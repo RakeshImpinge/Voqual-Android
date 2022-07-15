@@ -247,7 +247,7 @@ public class MyLogsFragment extends BaseFragment {
     private void callServicee(final String tagList) {
         showLoading(getString(R.string.please_wait));
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<DeletePostResponse> call = apiInterface.deletePost(delete_user_id);
+        Call<DeletePostResponse> call = apiInterface.deletePost(new SessionManager(requireActivity()).getAccessToken(), delete_user_id);
 
         call.enqueue(new Callback<DeletePostResponse>() {
             @Override
@@ -304,7 +304,7 @@ public class MyLogsFragment extends BaseFragment {
 
         showLoading(getString(R.string.please_wait));
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<ListResponse<MediaData>> callApi = apiInterface.videoList(userId);
+        Call<ListResponse<MediaData>> callApi = apiInterface.videoList(new SessionManager(requireActivity()).getAccessToken(), userId);
 
         callApi.enqueue(new Callback<ListResponse<MediaData>>() {
             @Override
@@ -461,7 +461,7 @@ public class MyLogsFragment extends BaseFragment {
         }
 
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<RestResponse<MediaData>> callApi = apiInterface.uploadMediaoffline(sessionManager.getUser().getId(), 2, VideoArray, partList_video);
+        Call<RestResponse<MediaData>> callApi = apiInterface.uploadMediaoffline(sessionManager.getAccessToken(), sessionManager.getUser().getId(), 2, VideoArray, partList_video);
 
         Log.e("video_id", String.valueOf(sessionManager.getUser().getId()));
         Log.e("video_title", String.valueOf(VideoArray));
@@ -541,7 +541,7 @@ public class MyLogsFragment extends BaseFragment {
             partList.add(MultipartBody.Part.createFormData("file[" + i + "]", list.get(i).getName(), reqFile));
         }
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<RestResponse<MediaData>> callApi = apiInterface.uploadMediaoffline(sessionManager.getUser().getId(), 1, jsonArray, partList);
+        Call<RestResponse<MediaData>> callApi = apiInterface.uploadMediaoffline(sessionManager.getAccessToken(), sessionManager.getUser().getId(), 1, jsonArray, partList);
 
         Log.e("audio_id", String.valueOf(sessionManager.getUser().getId()));
         Log.e("audio_title", String.valueOf(jsonArray));

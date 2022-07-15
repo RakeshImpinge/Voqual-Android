@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.westernsydneyunipx.model.MediaData;
 import com.westernsydneyunipx.util.OnPlayClickListener;
+import com.westernsydneyunipx.voqual.BuildConfig;
 import com.westernsydneyunipx.voqual.R;
 
 import java.util.ArrayList;

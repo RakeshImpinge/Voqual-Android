@@ -285,7 +285,7 @@ public class RecordAudioActivity extends BaseActivity implements Chronometer.OnC
         String timestamp = String.valueOf(System.currentTimeMillis());
 
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<RestResponse<MediaData>> callApi = apiInterface.uploadMedia(sessionManager.getUser().getId(), 1,
+        Call<RestResponse<MediaData>> callApi = apiInterface.uploadMedia(sessionManager.getAccessToken(),sessionManager.getUser().getId(), 1,
                 edtTitle.getText().toString(), body);
 
 

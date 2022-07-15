@@ -151,7 +151,8 @@ public class AllLogsFragment extends BaseFragment {
         showLoading(getString(R.string.please_wait));
 
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<ListResponse<MediaData>> callApi = apiInterface.videoList(new SessionManager(getActivity()).getUser().getId());
+        SessionManager sessionManager = new SessionManager(requireActivity());
+        Call<ListResponse<MediaData>> callApi = apiInterface.videoList(sessionManager.getAccessToken(), sessionManager.getUser().getId());
 
         callApi.enqueue(new Callback<ListResponse<MediaData>>() {
 
@@ -179,7 +180,7 @@ public class AllLogsFragment extends BaseFragment {
         showLoading(getString(R.string.please_wait));
 
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<RestResponse> callApi = apiInterface.deleteMedia(id);
+        Call<RestResponse> callApi = apiInterface.deleteMedia(new SessionManager(requireActivity()).getAccessToken(), id);
 
         callApi.enqueue(new Callback<RestResponse>() {
 

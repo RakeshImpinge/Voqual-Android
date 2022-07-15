@@ -83,7 +83,7 @@ public class ForgotPasswordActivity extends BaseActivity {
     private void callService() {
         showLoading(getString(R.string.please_wait));
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<ForgotPassword> callApi = apiInterface.forgotPass(Email);
+        Call<ForgotPassword> callApi = apiInterface.forgotPass(new SessionManager(this).getAccessToken(),Email);
         callApi.enqueue(new Callback<ForgotPassword>() {
             @Override
             public void onResponse(Call<ForgotPassword> call, Response<ForgotPassword> response) {

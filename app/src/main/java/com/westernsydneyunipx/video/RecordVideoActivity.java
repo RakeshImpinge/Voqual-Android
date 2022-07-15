@@ -295,7 +295,7 @@ public class RecordVideoActivity extends BaseActivity {
         Date date = new Date();
         String d = formatter.format(date);
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<RestResponse<MediaData>> callApi = apiInterface.uploadMedia(new SessionManager(
+        Call<RestResponse<MediaData>> callApi = apiInterface.uploadMedia(new SessionManager(this).getAccessToken(), new SessionManager(
                 RecordVideoActivity.this).getUser().getId(), 2, edtTitle.getText().toString(), body);
         callApi.enqueue(new Callback<RestResponse<MediaData>>() {
 

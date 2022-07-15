@@ -72,21 +72,22 @@ public interface APIInterface {
     Call<ListResponse<MediaData>> audioList(@Header ("Authorization") String accessToken,  @Query("user_id") int user_id);
 
     @GET("video_list")
-    Call<ListResponse<MediaData>> videoList(@Query("user_id") int user_id);
+    Call<ListResponse<MediaData>> videoList(@Header ("Authorization") String accessToken, @Query("user_id") int user_id);
 
     @GET("participant_list")
-    Call<ListResponse<Participant>> participantList(@Query("user_id") int user_id);
+    Call<ListResponse<Participant>> participantList(@Header ("Authorization") String accessToken, @Query("user_id") int user_id);
 
     @GET("delete_media")
-    Call<RestResponse> deleteMedia(@Query("id") int id);
+    Call<RestResponse> deleteMedia(@Header ("Authorization") String accessToken, @Query("id") int id);
 
     @POST("delete_postlist")
-    Call<DeletePostResponse> deletePost(@Query("id") String id);
+    Call<DeletePostResponse> deletePost(@Header ("Authorization") String accessToken, @Query("id") String id);
 
 
     @Multipart
     @POST("upload_media")
-    Call<RestResponse<MediaData>> uploadMedia(@Query("user_id") int user_id,
+    Call<RestResponse<MediaData>> uploadMedia(@Header ("Authorization") String accessToken,
+                                              @Query("user_id") int user_id,
                                               @Query("media_type") int mediaType,
                                               @Query("title") String title,
                                               @Part MultipartBody.Part image);
@@ -94,7 +95,8 @@ public interface APIInterface {
 
     @Multipart
     @POST("upload_multimedia")
-    Call<RestResponse<MediaData>> uploadMediaoffline(@Query("user_id") int user_id,
+    Call<RestResponse<MediaData>> uploadMediaoffline(@Header ("Authorization") String accessToken,
+                                                     @Query("user_id") int user_id,
                                                      @Query("media_type") int mediaType,
                                                      @Query("title") JSONArray name,
                                                      @Part ArrayList<MultipartBody.Part> image);
@@ -103,6 +105,6 @@ public interface APIInterface {
 
 
     @GET("forgotPassword")
-    Call<ForgotPassword> forgotPass(@Query("email") String email);
+    Call<ForgotPassword> forgotPass(@Header ("Authorization") String accessToken,@Query("email") String email);
 
 }

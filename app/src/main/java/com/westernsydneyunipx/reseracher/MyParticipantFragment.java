@@ -54,7 +54,8 @@ public class MyParticipantFragment extends BaseFragment {
         showLoading(getString(R.string.please_wait));
 
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<ListResponse<Participant>> callApi = apiInterface.participantList(new SessionManager(getActivity()).getUser().getId());
+        SessionManager sessionManager = new SessionManager(requireActivity());
+        Call<ListResponse<Participant>> callApi = apiInterface.participantList(sessionManager.getAccessToken(), sessionManager.getUser().getId());
 
         callApi.enqueue(new Callback<ListResponse<Participant>>() {
 
